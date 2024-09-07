@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="Muted" sid="956040597809202" static="0" type="number">0</variable>
+        <event-block sid="172355680203570">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="705476226450050" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="449492428235263" type="barrier_red">
+                    <param id="0" name="Frame number">choose(0,1)</param>
+                </action>
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="759574631049916" type="Enemy">
+                    <param id="0" name="Obstacle">Solids</param>
+                </action>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="184047135811771" type="Enemy">
+                    <param id="0" name="X">Point1.X</param>
+                    <param id="1" name="Y">Point1.Y</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="367204846966591" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="326210457099242">
+            <conditions>
+                <condition behavior="Pathfinding" id="0" name="On path found" sid="423919907024046" type="Enemy" />
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="1" name="Move along path" sid="609604199907168" type="Enemy" />
+            </actions>
+        </event-block>
+        <event-block sid="361516788207499">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="603899820770177" type="Enemy">
+                    <param id="0" name="Object">Point1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="682574441094972" type="Enemy">
+                    <param id="0" name="X">Point2.X</param>
+                    <param id="1" name="Y">Point2.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="681522456122644">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="745981594837545" type="Enemy">
+                    <param id="0" name="Object">Point2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="227013924796733" type="Enemy">
+                    <param id="0" name="X">Point3.X</param>
+                    <param id="1" name="Y">Point3.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="116828596982253">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="971677466085066" type="Enemy">
+                    <param id="0" name="Object">Point3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="784126634091200" type="Enemy">
+                    <param id="0" name="X">Point4.X</param>
+                    <param id="1" name="Y">Point4.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="763993794208117">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="223251750240818" type="Enemy">
+                    <param id="0" name="Object">Point4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="303581100554062" type="Enemy">
+                    <param id="0" name="X">Point6.X</param>
+                    <param id="1" name="Y">Point6.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="949634300748393">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="320751919737338" type="Enemy">
+                    <param id="0" name="Object">Point6</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="957026388115960" type="Enemy">
+                    <param id="0" name="X">Point7.X</param>
+                    <param id="1" name="Y">Point7.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="941100981656703">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="591766294843156" type="Enemy">
+                    <param id="0" name="Object">Point7</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="622833453924942" type="Enemy">
+                    <param id="0" name="X">Point1.X</param>
+                    <param id="1" name="Y">Point1.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="910617097197051">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="382683841551430" type="Car">
+                    <param id="0" name="Object">Lap1</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="158437558041632" type="Car">
+                    <param id="0" name="Instance variable">Laps_current</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="702428776233587" type="Car">
+                    <param id="0" name="Instance variable">Laps_current</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="948081178442245">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="477867601444685" type="Car">
+                    <param id="0" name="Object">Lap2</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="351466968455806" type="Car">
+                    <param id="0" name="Instance variable">Laps_current</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="727454655407170" type="Car">
+                    <param id="0" name="Instance variable">Laps_current</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="179925325510013" type="Car">
+                    <param id="0" name="Instance variable">Laps_left</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="792206335402595">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="497292295789330" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="588176012985829" type="Text">
+                    <param id="0" name="Text">&quot;Laps left: &quot; &amp; Car.Laps_left</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="732829427564768">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="943065825483714" type="Car">
+                    <param id="0" name="Instance variable">Laps_left</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="3" name="Set enabled" sid="601162378978321" type="Enemy">
+                    <param id="0" name="Set">0</param>
+                </action>
+                <action behavior="Car" id="8" name="Set enabled" sid="485258151802543" type="Car">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="841164973901229" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="0" name="Set text" sid="542205636901533" type="Text2">
+                    <param id="0" name="Text">&quot;You Win!&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="160109157914362" type="Sprite13">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="571372696227771" type="retry">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="696051410184338">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="664795266306945" type="Enemy">
+                    <param id="0" name="Instance variable">LapsLeft</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="3" name="Set enabled" sid="144723809674039" type="Enemy">
+                    <param id="0" name="Set">0</param>
+                </action>
+                <action behavior="Car" id="8" name="Set enabled" sid="110467092864453" type="Car">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="781257067853300" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="0" name="Set text" sid="288577300544119" type="Text2">
+                    <param id="0" name="Text">&quot;You lose&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="408894483656813" type="Sprite13">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="363772463033614" type="retry">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="158722099475125">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="988995548004460" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">retry</param>
+                </condition>
+                <condition id="-9" name="Layer is visible" sid="721410080835049" type="System">
+                    <param id="0" name="Layer">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="562675532052676" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="216506213022750">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="337341838569150" type="Enemy">
+                    <param id="0" name="Object">Lap2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="495915475093598" type="Enemy">
+                    <param id="0" name="Instance variable">LapsLeft</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="938128740875537">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="958451887445413" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Sprite13</param>
+                </condition>
+                <condition id="-9" name="Layer is visible" sid="317004726709436" type="System">
+                    <param id="0" name="Layer">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-43" name="Go to next/previous layout" sid="996919781352089" type="System">
+                    <param id="0" name="Which">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="443466382312710">
+            <conditions>
+                <condition id="17" name="On tap object" sid="693779981050323" type="Touch">
+                    <param id="0" name="Object">ButtonMoreGames</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="8" name="Open URL in new window" sid="884445087606530" type="Browser">
+                    <param id="0" name="URL">&quot;http://www.mixygames.com&quot;</param>
+                    <param id="1" name="Tag">&quot;NewWindow&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="317913216085666">
+            <conditions>
+                <condition id="17" name="On tap object" sid="715332631572936" type="Touch">
+                    <param id="0" name="Object">full_screen</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="602246083752610">
+                    <conditions>
+                        <condition id="10" name="Is fullscreen" sid="516247580729964" type="Browser" />
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Cancel fullscreen" sid="588678747440555" type="Browser" />
+                    </actions>
+                </event-block>
+                <event-block sid="292936715802072">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="337649989403912" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="10" name="Request fullscreen" sid="805518368948866" type="Browser">
+                            <param id="0" name="Mode">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="448141282505056">
+            <conditions>
+                <condition id="17" name="On back button" sid="719108650990422" type="Browser" />
+            </conditions>
+            <actions>
+                <action id="1" name="Close" sid="140167983449065" type="Browser" />
+            </actions>
+        </event-block>
+        <event-block sid="626441870068377">
+            <conditions>
+                <condition id="17" name="On tap object" sid="181805451762627" type="Touch">
+                    <param id="0" name="Object">facebook_button</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="8" name="Open URL in new window" sid="680474699333137" type="Browser">
+                    <param id="0" name="URL">&quot;https://www.facebook.com/bnagames/?ref=aymt_homepage_panel&quot;</param>
+                    <param id="1" name="Tag">&quot;NewWindow&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="193674350210966">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="465397111592693" type="Touch">
+                    <param id="0" name="Object">touch_left</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Car" id="7" name="Simulate control" sid="461522567871173" type="Car">
+                    <param id="0" name="Control">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="396820464245841">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="210792713637059" type="Touch">
+                    <param id="0" name="Object">touch_right</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Car" id="7" name="Simulate control" sid="542575938049390" type="Car">
+                    <param id="0" name="Control">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="950440241521877">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="694394845031881" type="Touch">
+                    <param id="0" name="Object">touch_up</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Car" id="7" name="Simulate control" sid="535408057022313" type="Car">
+                    <param id="0" name="Control">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="941039828671458">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="298624068452948" type="Touch">
+                    <param id="0" name="Object">touch_down</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Car" id="7" name="Simulate control" sid="550932936371887" type="Car">
+                    <param id="0" name="Control">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="233609603891313">
+            <conditions>
+                <condition id="17" name="On tap object" sid="291898263213865" type="Touch">
+                    <param id="0" name="Object">btnSound</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="291505123714460">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="192687450889862" type="System">
+                            <param id="0" name="Variable">Muted</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Set silent" sid="943604898132969" type="Audio">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="363926831513093" type="System">
+                            <param id="0" name="Variable">Muted</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="394642078472761">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="559704393054594" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Set silent" sid="473831680460098" type="Audio">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="210914297677951" type="System">
+                            <param id="0" name="Variable">Muted</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="118211030589208">
+                    <conditions />
+                    <actions>
+                        <action id="5" name="Set frame" sid="419697374256983" type="btnSound">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

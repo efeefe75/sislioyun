@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Action">
+
+    <TextView
+        android:id="@+id/actiontext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/inter_bold"
+        android:letterSpacing="-0.04"
+        android:lineSpacingExtra="11sp"
+        android:text="Aksiyon"
+        android:textColor="#ff8b6f"
+        android:textSize="45sp" />
+
+    <TextView
+        android:id="@+id/actiontext1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/inter_bold"
+        android:letterSpacing="-0.04"
+        android:lineSpacingExtra="16sp"
+        android:text="Kaydır"
+        android:textColor="#020101"
+        android:textSize="15sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/actiontext">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 1st row -->
+            <LinearLayout
+                android:id="@+id/a1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- item1 -->
+                    <RelativeLayout
+                        android:id="@+id/a_item1"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_margin="10dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/action1" />
+
+                        <Button
+                            android:id="@+id/a1_download"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="10dp"
+                            android:background="@android:color/holo_red_light"
+                            android:text="İndir"
+                            android:textColor="@color/black" />
+                    </RelativeLayout>
+
+                    <!-- item2 -->
+                    <RelativeLayout
+                        android:id="@+id/a_item2"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_margin="10dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/action2" />
+
+                        <Button
+                            android:id="@+id/a2_download"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="İndir"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/holo_red_light"
+                            android:textColor="@android:color/white"
+                            android:layout_marginBottom="10dp" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 2nd row -->
+            <LinearLayout
+                android:id="@+id/a2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- item3 -->
+                    <RelativeLayout
+                        android:id="@+id/a_item3"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_margin="10dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/action3" />
+
+                        <Button
+                            android:id="@+id/a3_download"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="İndir"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/holo_red_light"
+                            android:textColor="@android:color/white"
+                            android:layout_marginBottom="10dp" />
+                    </RelativeLayout>
+
+                    <!-- item4 -->
+                    <RelativeLayout
+                        android:id="@+id/a_item4"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_margin="10dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/action4" />
+
+                        <Button
+                            android:id="@+id/a4_download"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="İndir"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/holo_red_light"
+                            android:textColor="@android:color/white"
+                            android:layout_marginBottom="10dp" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 3rd row -->
+            <LinearLayout
+                android:id="@+id/a3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- item5 -->
+                    <RelativeLayout
+                        android:id="@+id/a_item5"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_margin="10dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/action5" />
+
+                        <Button
+                            android:id="@+id/a5_download"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="İndir"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/holo_red_light"
+                            android:textColor="@android:color/white"
+                            android:layout_marginBottom="10dp" />
+                    </RelativeLayout>
+
+                    <!-- item6 -->
+                    <RelativeLayout
+                        android:id="@+id/a_item6"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_margin="10dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/action6" />
+
+                        <Button
+                            android:id="@+id/a6_download"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="İndir"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/holo_red_light"
+                            android:textColor="@android:color/white"
+                            android:layout_marginBottom="10dp" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 4th row -->
+            <LinearLayout
+                android:id="@+id/a4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- item7 -->
+                    <RelativeLayout
+                        android:id="@+id/a_item7"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_margin="10dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/action1" />
+
+                        <Button
+                            android:id="@+id/a7_download"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="İndir"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/holo_red_light"
+                            android:textColor="@android:color/white"
+                            android:layout_marginBottom="10dp" />
+                    </RelativeLayout>
+
+                    <!-- item8 -->
+                    <RelativeLayout
+                        android:id="@+id/a_item8"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_margin="10dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/action2" />
+
+                        <Button
+                            android:id="@+id/a8_download"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="İndir"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@android:color/holo_red_light"
+                            android:textColor="@android:color/white"
+                            android:layout_marginBottom="10dp" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

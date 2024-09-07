@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Finish sheet </name>
+    <events>
+        <event-block sid="817371012473998">
+            <conditions>
+                <condition id="17" name="On tap object" sid="452762056892833" type="Touch">
+                    <param id="0" name="Object">Sprite15</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="8" name="Open URL in new window" sid="975354284875645" type="Browser">
+                    <param id="0" name="URL">&quot;http://mixygames.com&quot;</param>
+                    <param id="1" name="Tag">&quot;NewWindow&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="455559310879032">
+            <conditions>
+                <condition id="17" name="On tap object" sid="267545966335906" type="Touch">
+                    <param id="0" name="Object">retry</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="846461169281487" type="System">
+                    <param id="0" name="Layout">Menu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="549739917434635">
+            <conditions>
+                <condition id="17" name="On tap object" sid="168420777947911" type="Touch">
+                    <param id="0" name="Object">btnSound</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="274262939383348">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="775637206714359" type="System">
+                            <param id="0" name="Variable">Muted</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Set silent" sid="628560226770748" type="Audio">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="898827403542236" type="System">
+                            <param id="0" name="Variable">Muted</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="235913166716190">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="970821328780830" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Set silent" sid="319185660478144" type="Audio">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="947432170407399" type="System">
+                            <param id="0" name="Variable">Muted</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="158285100188793">
+                    <conditions />
+                    <actions>
+                        <action id="5" name="Set frame" sid="192078502638283" type="btnSound">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ksp.sislioyun">
+
+    <!-- İzinler -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GameBox"
+        android:usesCleartextTraffic="true">
+
+        <!-- Aktiviteler -->
+        <activity android:name="com.ksp.sislioyun.firsttime.Screen_three"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.ksp.sislioyun.firsttime.Screen_two"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.ksp.sislioyun.firsttime.Screen_one"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.ksp.sislioyun.No_internet"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.ksp.sislioyun.Mind"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.ksp.sislioyun.Cards"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.ksp.sislioyun.Classic"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.ksp.sislioyun.Racing"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.ksp.sislioyun.Action"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.ksp.sislioyun.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.ksp.sislioyun.GameLoader"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.ksp.sislioyun.Contact"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.ksp.sislioyun.Category"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.ksp.sislioyun.SplashScreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Meta-data -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
+    </application>
+
+</manifest>
